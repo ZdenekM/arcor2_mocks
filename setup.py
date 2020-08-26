@@ -22,7 +22,13 @@ setup(
     description='',
     setup_requires=['another-setuptools-git-version'],
     install_requires=[
-        'arcor2'
+        'arcor2',
+        'apispec',
+        'apispec_webframeworks',
+        'flask',
+        'flask_swagger_ui',
+        'flask-cors',
+        'dataclasses_jsonschema'
     ],
     extras_require={
         'test': [
@@ -36,7 +42,9 @@ setup(
             'flake8-tidy-imports',
             'flake8-annotations-coverage',
             'flake8-pytest-style',
-            'flake8-bugbear'
+            'flake8-bugbear',
+            'flake8-requirements',
+            'yaml'
             ],
         'docs': ['sphinx']
     },

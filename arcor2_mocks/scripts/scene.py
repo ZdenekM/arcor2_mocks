@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import argparse
 import json
-import os
 import uuid
 from typing import Dict, Tuple, Union, cast
 
@@ -20,7 +18,7 @@ from flask_cors import CORS  # type: ignore
 from flask_swagger_ui import get_swaggerui_blueprint  # type: ignore
 
 import arcor2
-from arcor2.data import common, object_type
+from arcor2.data import common, object_type, scene
 from arcor2.helpers import camel_case_to_snake_case
 from arcor2.rest import convert_keys
 
@@ -301,7 +299,7 @@ spec.components.schema(object_type.Box.__name__, schema=object_type.Box)
 spec.components.schema(object_type.Cylinder.__name__, schema=object_type.Cylinder)
 spec.components.schema(object_type.Sphere.__name__, schema=object_type.Sphere)
 spec.components.schema(object_type.Mesh.__name__, schema=object_type.Mesh)
-spec.components.schema(object_type.MeshFocusAction.__name__, schema=object_type.MeshFocusAction)
+spec.components.schema(scene.MeshFocusAction.__name__, schema=scene.MeshFocusAction)
 
 
 with app.test_request_context():

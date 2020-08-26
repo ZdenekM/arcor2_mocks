@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import argparse
 import json
-import os
 import uuid
 from datetime import datetime, timezone
 from typing import Dict, Tuple, Union, cast
@@ -20,7 +18,6 @@ from flask_cors import CORS  # type: ignore
 
 from flask_swagger_ui import get_swaggerui_blueprint  # type: ignore
 
-import arcor2
 from arcor2.data import common, object_type
 from arcor2.helpers import camel_case_to_snake_case
 from arcor2.rest import convert_keys
